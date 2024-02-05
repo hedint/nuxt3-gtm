@@ -1,9 +1,15 @@
 {
   "name": "nuxt3-gtm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Nuxt 3 GTM module",
   "repository": "https://github.com/hedint/nuxt3-gtm",
-  "keywords": ["nuxt", "nuxt3", "nuxt-module", "gtm", "nuxt3-gtm"],
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "nuxt-module",
+    "gtm",
+    "nuxt3-gtm"
+  ],
   "author": "Vyacheslav Volodinn<vachvol@gmail.com>",
   "license": "MIT",
   "type": "module",

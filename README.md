@@ -44,7 +44,7 @@ There are only two settings:
 - **id**: your gtm id
 - **shownInDevMode** : Whether you want GTM to be included in a dev environment.
 
-You are ably to pass these options through:
+You are able to pass these options through:
 
 - gtm section in your nuxt.config.ts
 ```javascript

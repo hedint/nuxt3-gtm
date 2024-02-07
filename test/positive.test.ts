@@ -2,7 +2,7 @@ import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { $fetch, setup } from "@nuxt/test-utils/e2e";
 
-describe("ssr", async () => {
+describe("positive SSR", async () => {
   await setup({
     rootDir: fileURLToPath(new URL("./fixtures/positive", import.meta.url)),
   });

@@ -1,4 +1,4 @@
-import { addServerPlugin, createResolver, defineNuxtModule } from "@nuxt/kit";
+import { addImports, addPlugin, addServerPlugin, createResolver, defineNuxtModule } from "@nuxt/kit";
 import { defu } from "defu";
 import type { Nuxt3GtmModuleOptions } from "./types/nuxt3-gtm-module-options";
 
@@ -17,6 +17,15 @@ export default defineNuxtModule<ModuleOptions>({
     };
     nuxt.options.runtimeConfig.public.gtm = defu(nuxt.options.runtimeConfig.public.gtm, options, defaultOptions);
     addServerPlugin(resolve("./runtime/server/plugins/nitro-plugin-gtm"));
+    addImports({
+      name: "useGtm",
+      as: "useGtm",
+      from: resolve("./runtime/client/composables/use-gtm"),
+    });
+    addPlugin({
+      src: resolve("./runtime/client/plugins/plugin-gtm.client"),
+      mode: "client",
+    });
   },
 });
 

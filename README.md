@@ -40,6 +40,8 @@ export default defineNuxtConfig({
   ]
 })
 ```
+
+## Settings 
 There are only two settings:
 - **id**: your gtm id
 - **shownInDevMode** : Whether you want GTM to be included in a dev environment.
@@ -73,6 +75,29 @@ export default defineNuxtConfig({
     }
   }
 })
+```
+
+## Helpers and composables
+There is also an auto-imported composable called "useGtm".
+You can trigger events in GTM dataLayer with it, for example
+```javascript
+const gtm = useGtm();
+gtm.pushData({ 
+  event: "test",
+  data: "myData",
+});
+```
+Although **this feature is supported during SSR**, keep in mind that your events might be doubled if you use this composable carelessly.
+```javascript
+//to avoid duplicates, you can trigger such events only on the client side or only on the server side
+<script setup lang="ts">
+if (process.server) {
+  gtm.pushData({
+    event: "test",
+    data: "myData",
+  })
+}
+</script>
 ```
 
 ## Development

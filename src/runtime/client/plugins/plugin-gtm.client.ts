@@ -6,7 +6,6 @@ export default defineNuxtPlugin({
   hooks: {
     "app:beforeMount": () => {
       const gtmDataLayer = useGtmDataLayerData();
-      console.info(gtmDataLayer);
       while (gtmDataLayer.value.length) {
         const obj = gtmDataLayer.value.shift();
         if (obj) {

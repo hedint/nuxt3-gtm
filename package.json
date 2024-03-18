@@ -10,7 +10,7 @@
     "gtm",
     "nuxt3-gtm"
   ],
-  "author": "Vyacheslav Volodinn<vachvol@gmail.com>",
+  "author": "Vyacheslav Volodin<vachvol@gmail.com>",
   "license": "MIT",
   "type": "module",
   "exports": {

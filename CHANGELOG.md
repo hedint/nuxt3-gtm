@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.4
+
+[compare changes](https://github.com/hedint/nuxt3-gtm/compare/v1.0.3...v1.0.4)
+
 ## v1.0.3
 
 delete extra script; delete comments in gtm script;
